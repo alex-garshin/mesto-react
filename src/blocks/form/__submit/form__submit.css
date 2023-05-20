@@ -1,4 +1,6 @@
 .form__submit {
+  margin: 12px 0 0;
+  padding: 14px 20px 18px;
   width: 100%;
   max-height: 50px;
   background: #000000;
@@ -11,8 +13,6 @@
   line-height: 22px;
   text-align: center;
   color: #FFF;
-  padding: 14px 20px 18px;
-  margin-top: 12px;
   cursor: pointer;
   transition: opacity .3s linear;
 }
@@ -31,9 +31,9 @@
 
 @media screen and (max-width: 568px) {
   .form__submit {
+    padding: 14px 20px;
     max-height: 46px;
     font-size: 14px;
     line-height: 17px;
-    padding: 14px 20px;
   }
 }

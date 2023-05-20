@@ -1,6 +1,6 @@
 .profile__title {
-  max-width: 294px;
   margin: 0;
+  max-width: 294px;
   font-weight: 500;
   font-size: 42px;
   line-height: 48px;
@@ -9,7 +9,6 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  /*vertical-align: top;*/
 }
 
 @media screen and (max-width: 1140px) {

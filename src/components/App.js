@@ -83,7 +83,7 @@ function App() {
             type="text"
             name="name"
             id="name"
-            placeholder="Название"
+            placeholder="Название картинки"
             minLength="2"
             maxLength="30"
             value={cardTitle}
@@ -121,7 +121,7 @@ function App() {
             type="text"
             name="username"
             id="username"
-            placeholder="Имя"
+            placeholder="Имя профиля"
             minLength="2"
             maxLength="40"
             value={profileName}
@@ -135,7 +135,7 @@ function App() {
             type="text"
             name="job"
             id="job"
-            placeholder="О себе"
+            placeholder="информация о профиле"
             minLength="2"
             maxLength="200"
             value={profilejob}
@@ -161,7 +161,7 @@ function App() {
             type="url"
             name="avatar"
             id="avatar"
-            placeholder="Ссылка на картинку"
+            placeholder="Ссылка на картинку аватара"
             value={avatarLink}
             onChange={(e) => handleChangeAvatarLink(e)}
             required
