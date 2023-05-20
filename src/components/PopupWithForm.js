@@ -21,9 +21,9 @@ function PopupWithForm(props) {
           className="form popup__form"
           noValidate
         >
-          {props.children}
+          <fieldset className="form__set">{props.children}</fieldset>
           <button className="form__submit" type="submit">
-          {props.buttonText}
+            {props.buttonText}
           </button>
         </form>
       </div>

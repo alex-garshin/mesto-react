@@ -78,33 +78,31 @@ function App() {
         onClose={closeAllPopups}
         buttonText="Создать"
       >
-        <fieldset className="form__set">
-          <input
-            className="form__input form__input_type_name"
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Название картинки"
-            minLength="2"
-            maxLength="30"
-            value={cardTitle}
-            onChange={(e) => handleChangeCardTitle(e)}
-            required
-          />
-          <span id="name-error" className="form__input-error" />
+        <input
+          className="form__input form__input_type_name"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Название картинки"
+          minLength="2"
+          maxLength="30"
+          value={cardTitle}
+          onChange={(e) => handleChangeCardTitle(e)}
+          required
+        />
+        <span id="name-error" className="form__input-error" />
 
-          <input
-            className="form__input form__input_type_link"
-            type="url"
-            name="link"
-            id="link"
-            placeholder="Ссылка на картинку"
-            value={cardLink}
-            onChange={(e) => handleChangeCardLink(e)}
-            required
-          />
-          <span id="link-error" className="form__input-error" />
-        </fieldset>
+        <input
+          className="form__input form__input_type_link"
+          type="url"
+          name="link"
+          id="link"
+          placeholder="Ссылка на картинку"
+          value={cardLink}
+          onChange={(e) => handleChangeCardLink(e)}
+          required
+        />
+        <span id="link-error" className="form__input-error" />
       </PopupWithForm>
       <PopupWithForm
         name="profile-edit"
@@ -113,35 +111,33 @@ function App() {
         onClose={closeAllPopups}
         buttonText="Сохранить"
       >
-        <fieldset className="form__set">
-          <input
-            className="form__input form__input_type_username"
-            type="text"
-            name="username"
-            id="username"
-            placeholder="Имя профиля"
-            minLength="2"
-            maxLength="40"
-            value={profileName}
-            onChange={(e) => handleChangeProfileName(e)}
-            required
-          />
-          <span id="username-error" className="form__input-error" />
+        <input
+          className="form__input form__input_type_username"
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Имя профиля"
+          minLength="2"
+          maxLength="40"
+          value={profileName}
+          onChange={(e) => handleChangeProfileName(e)}
+          required
+        />
+        <span id="username-error" className="form__input-error" />
 
-          <input
-            className="form__input form__input_type_job"
-            type="text"
-            name="job"
-            id="job"
-            placeholder="информация о профиле"
-            minLength="2"
-            maxLength="200"
-            value={profilejob}
-            onChange={(e) => handleChangeProfilejob(e)}
-            required
-          />
-          <span id="job-error" className="form__input-error" />
-        </fieldset>
+        <input
+          className="form__input form__input_type_job"
+          type="text"
+          name="job"
+          id="job"
+          placeholder="информация о профиле"
+          minLength="2"
+          maxLength="200"
+          value={profilejob}
+          onChange={(e) => handleChangeProfilejob(e)}
+          required
+        />
+        <span id="job-error" className="form__input-error" />
       </PopupWithForm>
       <PopupWithForm
         name="update-avatar"
@@ -150,19 +146,17 @@ function App() {
         onClose={closeAllPopups}
         buttonText="Сохранить"
       >
-        <fieldset className="form__set">
-          <input
-            className="form__input form__input_type_avatar"
-            type="url"
-            name="avatar"
-            id="avatar"
-            placeholder="Ссылка на картинку аватара"
-            value={avatarLink}
-            onChange={(e) => handleChangeAvatarLink(e)}
-            required
-          />
-          <span id="avatar-error" className="form__input-error" />
-        </fieldset>
+        <input
+          className="form__input form__input_type_avatar"
+          type="url"
+          name="avatar"
+          id="avatar"
+          placeholder="Ссылка на картинку аватара"
+          value={avatarLink}
+          onChange={(e) => handleChangeAvatarLink(e)}
+          required
+        />
+        <span id="avatar-error" className="form__input-error" />
       </PopupWithForm>
       <PopupWithForm
         name="delete-card"
@@ -170,8 +164,7 @@ function App() {
         isOpen={false}
         onClose={closeAllPopups}
         buttonText="Да"
-      >
-      </PopupWithForm>
+      ></PopupWithForm>
       <ImagePopup card={selectedCard} onClose={closeAllPopups} />
     </div>
   );
