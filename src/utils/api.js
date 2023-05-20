@@ -4,7 +4,7 @@ export class Api {
     this._headers = options.headers;
   }
 
-  _checkResponse(res) {
+  _checkFeedback(res) {
     if (res.ok) {
       return res.json();
     }
@@ -16,7 +16,7 @@ export class Api {
       method: "GET",
       headers: this._headers,
     }).then((res) => {
-      return this._checkResponse(res);
+      return this._checkFeedback(res);
     });
   }
 
@@ -25,7 +25,7 @@ export class Api {
       method: "GET",
       headers: this._headers,
     }).then((res) => {
-      return this._checkResponse(res);
+      return this._checkFeedback(res);
     });
   }
 
@@ -38,16 +38,16 @@ export class Api {
         link: card.link,
       }),
     }).then((res) => {
-      return this._checkResponse(res);
+      return this._checkFeedback(res);
     });
   }
 
-  delCard(cardID) {
+  deleteCard(cardID) {
     return fetch(`${this._baseUrl}/cards/${cardID}`, {
       method: "DELETE",
       headers: this._headers,
     }).then((res) => {
-      return this._checkResponse(res);
+      return this._checkFeedback(res);
     });
   }
 
@@ -56,16 +56,16 @@ export class Api {
       method: "PUT",
       headers: this._headers,
     }).then((res) => {
-      return this._checkResponse(res);
+      return this._checkFeedback(res);
     });
   }
 
-  delLikeCard(cardID) {
+  deleteLikeCard(cardID) {
     return fetch(`${this._baseUrl}/cards/${cardID}/likes`, {
       method: "DELETE",
       headers: this._headers,
     }).then((res) => {
-      return this._checkResponse(res);
+      return this._checkFeedback(res);
     });
   }
 
@@ -78,7 +78,7 @@ export class Api {
         about: data.job,
       }),
     }).then((res) => {
-      return this._checkResponse(res);
+      return this._checkFeedback(res);
     });
   }
 
@@ -90,7 +90,7 @@ export class Api {
         avatar: data.avatar,
       }),
     }).then((res) => {
-      return this._checkResponse(res);
+      return this._checkFeedback(res);
     });
   }
 }

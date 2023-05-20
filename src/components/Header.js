@@ -3,11 +3,11 @@ import headerLogo from "../images/logo-place.svg";
 
 function Header() {
   return (
-    <header className="header page__header">
+    <header className="page__header header">
       <img
         className="header__logo"
         src={headerLogo}
-        alt="Логотип с картой России"
+        alt="Логотип"
       />
     </header>
   );
