@@ -173,7 +173,7 @@ function App() {
         </fieldset>
       </PopupWithForm>
       <PopupWithForm
-        name="del-card"
+        name="delete-card"
         title="Вы уверены?"
         isOpen={false}
         onClose={closeAllPopups}

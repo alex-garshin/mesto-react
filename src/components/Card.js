@@ -25,7 +25,7 @@ function Card(props) {
         </div>
       </div>
       <button
-        className="card__del-button"
+        className="card__delete-button"
         type="button"
         aria-label="Удалить"
       ></button>
