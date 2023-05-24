@@ -39,5 +39,8 @@
   },
   "devDependencies": {
     "gh-pages": "^5.0.0"
-  }
+  },
+  "homepage":"https://alex-garshin.github.io/mesto-react/"
 }
+
+
