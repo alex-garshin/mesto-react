@@ -8,6 +8,7 @@ export class Api {
     if (res.ok) {
       return res.json();
     }
+
     return Promise.reject(`Ошибка: ${res.status}`);
   }
 
@@ -29,13 +30,13 @@ export class Api {
     });
   }
 
-  addCard(card) {
+  addCard({ name, link }) {
     return fetch(`${this._baseUrl}/cards`, {
       method: "POST",
       headers: this._headers,
       body: JSON.stringify({
-        name: card.name,
-        link: card.link,
+        name,
+        link,
       }),
     }).then((res) => {
       return this._checkFeedback(res);
@@ -51,43 +52,34 @@ export class Api {
     });
   }
 
-  setLikeCard(cardID) {
+  changeLikeCardStatus(cardID, isLiked) {
     return fetch(`${this._baseUrl}/cards/${cardID}/likes`, {
-      method: "PUT",
+      method: `${!isLiked ? "DELETE" : "PUT"}`,
       headers: this._headers,
     }).then((res) => {
       return this._checkFeedback(res);
     });
   }
 
-  deleteLikeCard(cardID) {
-    return fetch(`${this._baseUrl}/cards/${cardID}/likes`, {
-      method: "DELETE",
-      headers: this._headers,
-    }).then((res) => {
-      return this._checkFeedback(res);
-    });
-  }
-
-  changeUserData(data) {
+  changeUserData({ username, job }) {
     return fetch(`${this._baseUrl}/users/me`, {
       method: "PATCH",
       headers: this._headers,
       body: JSON.stringify({
-        name: data.username,
-        about: data.job,
+        name: username,
+        about: job,
       }),
     }).then((res) => {
       return this._checkFeedback(res);
     });
   }
 
-  updateAvatar(data) {
+  updateAvatar({ avatar }) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: "PATCH",
       headers: this._headers,
       body: JSON.stringify({
-        avatar: data.avatar,
+        avatar: avatar,
       }),
     }).then((res) => {
       return this._checkFeedback(res);
